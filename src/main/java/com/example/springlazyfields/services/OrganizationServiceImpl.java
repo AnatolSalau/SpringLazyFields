@@ -17,6 +17,6 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     @Override
     public Organization getById(long orgId) {
-        return repository.getById(orgId);
+        return repository.findById(orgId).get();
     }
 }
