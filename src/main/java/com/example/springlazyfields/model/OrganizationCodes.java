@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @Entity
 @NoArgsConstructor
-@Table(name = "employee")
+@Table(name = "org_codes")
 public class OrganizationCodes {
 
     @Id
