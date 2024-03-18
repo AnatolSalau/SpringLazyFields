@@ -1,12 +1,9 @@
 package com.example.springlazyfields.services;
 
 import com.example.springlazyfields.model.Employee;
-import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class OrganizationServiceImplTest {
@@ -24,7 +21,7 @@ class OrganizationServiceImplTest {
       @Test
       void getHeadNameFromOrg() {
             Long orgId = 1L;
-            String headNameFromOrg = organizationService.getHeadNameFromOrg(orgId);
+            String headNameFromOrg = organizationService.getHeadNameFromOrgTransactional(orgId);
             System.out.println("Head name : " + headNameFromOrg);
       }
 }

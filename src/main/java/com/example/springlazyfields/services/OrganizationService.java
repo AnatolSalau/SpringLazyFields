@@ -5,5 +5,5 @@ import com.example.springlazyfields.model.Organization;
 public interface OrganizationService {
       public Organization getById(long orgId);
 
-      String getHeadNameFromOrg(long orgId);
+      String getHeadNameFromOrgTransactional(long orgId);
 }

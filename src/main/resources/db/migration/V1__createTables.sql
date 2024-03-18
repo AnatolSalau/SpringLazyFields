@@ -1,4 +1,4 @@
-create table employee
+create table if not exists employee
 (
     id         bigserial
         primary key,
@@ -10,7 +10,7 @@ create table employee
 alter table employee
     owner to postgres;
 
-create table org_codes
+create table if not exists org_codes
 (
     id   bigserial
         primary key,

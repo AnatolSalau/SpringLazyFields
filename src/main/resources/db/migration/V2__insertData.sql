@@ -1,5 +1,5 @@
 
-INSERT INTO employee (first_name, last_name)
+INSERT INTO employee  (first_name, last_name)
 VALUES ('first_name1', 'last_name1'),
        ('first_name2', 'last_name2'),
        ('first_name3', 'last_name3'),

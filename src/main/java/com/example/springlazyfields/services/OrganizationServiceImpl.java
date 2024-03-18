@@ -21,12 +21,15 @@ public class OrganizationServiceImpl implements OrganizationService {
 
     @Override
     public Organization getById(long orgId) {
-        return repository.findById(orgId).get();
+
+        Organization organization = repository.findById(orgId).get();
+
+        return organization;
     }
 
     @Transactional
     @Override
-    public String getHeadNameFromOrg(long orgId) {
+    public String getHeadNameFromOrgTransactional(long orgId) {
         Organization  org = repository.findById(orgId).get();
         Employee head = org.getHead();
         return head.getFirstName();
