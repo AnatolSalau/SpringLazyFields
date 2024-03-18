@@ -19,9 +19,16 @@ class OrganizationServiceImplTest {
       }
 
       @Test
-      void getHeadNameFromOrg() {
+      void getHeadNameFromOrgTransactional() {
             Long orgId = 1L;
             String headNameFromOrg = organizationService.getHeadNameFromOrgTransactional(orgId);
             System.out.println("Head name : " + headNameFromOrg);
+      }
+
+      @Test
+      void getHeadNameFromOrgJpaQueryJoinFetch() {
+            Long orgId = 1L;
+            String headNameFromOrgJpaQueryJoinFetch = organizationService.getHeadNameFromOrgJpaQueryJoinFetch(orgId);
+            System.out.println("Head name : " + headNameFromOrgJpaQueryJoinFetch);
       }
 }

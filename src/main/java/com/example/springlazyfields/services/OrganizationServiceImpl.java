@@ -34,4 +34,10 @@ public class OrganizationServiceImpl implements OrganizationService {
         Employee head = org.getHead();
         return head.getFirstName();
     }
+
+    @Override
+    public String getHeadNameFromOrgJpaQueryJoinFetch(long orgId) {
+        Employee head = repository.getByIdFetchHead(orgId).getHead();
+        return head.getFirstName();
+    }
 }
